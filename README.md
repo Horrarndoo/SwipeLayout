@@ -1,5 +1,7 @@
 #SwipeLayout
+
 ##主要实现类QQ滑动抽屉效果
+
 	1.侧滑显示抽屉隐藏view
 	2.侧滑抽屉隐藏view控件点击事件
 	3.单击任意item隐藏显示的抽屉view
