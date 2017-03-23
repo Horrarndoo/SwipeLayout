@@ -9,6 +9,6 @@
 	5.增加SwipeLayout点击事件和Swipe touch事件判断处理
 	6.优化快速划开多个抽屉隐藏view时多个SwipeLayout滑动状态判断处理，仅显示最后一个滑动的抽屉隐藏view，恢复前面多个打开的抽屉隐藏view
 
-详细Android自定义控件-类QQ抽屉效果：[http://blog.csdn.net/oqinyou/article/details/63252464](Android自定义控件-类QQ抽屉效果)
+详细：[Android自定义控件-类QQ抽屉效果](http://blog.csdn.net/oqinyou/article/details/63252464)
 
 ![](https://raw.githubusercontent.com/Horrarndoo/SwipeLayout/master/assets/demo.gif)
