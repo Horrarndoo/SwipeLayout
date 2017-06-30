@@ -23,18 +23,15 @@ public class SwipeAdapter extends BaseAdapter implements OnSwipeStateChangeListe
     private MyClickListener myClickListener;
     private SwipeLayoutManager swipeLayoutManager;
 
-    public SwipeAdapter(Context mContext) {
+    public SwipeAdapter(Context mContext, List<String> list) {
         super();
         this.mContext = mContext;
-        init();
-    }
-
-    private void init() {
         myClickListener = new MyClickListener();
+        this.list = list;
         swipeLayoutManager = SwipeLayoutManager.getInstance();
     }
 
-    public void setList(List<String> list){
+    public void setList(List<String> list) {
         this.list = list;
         notifyDataSetChanged();
     }
@@ -109,14 +106,14 @@ public class SwipeAdapter extends BaseAdapter implements OnSwipeStateChangeListe
                 case R.id.tv_overhead:
                     //ToastUtils.showToast("position : " + position + " overhead is clicked.");
                     swipeLayoutManager.closeUnCloseSwipeLayout(false);
-                    if(onSwipeControlListener != null){
+                    if (onSwipeControlListener != null) {
                         onSwipeControlListener.onOverhead(position, list.get(position));
                     }
                     break;
                 case R.id.tv_delete:
                     //ToastUtils.showToast("position : " + position + " delete is clicked.");
                     swipeLayoutManager.closeUnCloseSwipeLayout(false);
-                    if(onSwipeControlListener != null){
+                    if (onSwipeControlListener != null) {
                         onSwipeControlListener.onDelete(position, list.get(position));
                     }
                     break;
@@ -148,14 +145,14 @@ public class SwipeAdapter extends BaseAdapter implements OnSwipeStateChangeListe
 
     private OnSwipeControlListener onSwipeControlListener;
 
-    public void setOnSwipeControlListener(OnSwipeControlListener onSwipeControlListener){
+    public void setOnSwipeControlListener(OnSwipeControlListener onSwipeControlListener) {
         this.onSwipeControlListener = onSwipeControlListener;
     }
 
     /**
      * overhead 和 delete点击事件接口
      */
-    public interface OnSwipeControlListener{
+    public interface OnSwipeControlListener {
         void onOverhead(int position, String itemTitle);
 
         void onDelete(int position, String itemTitle);

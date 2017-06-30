@@ -37,8 +37,7 @@ public class MainActivity extends Activity implements OnSwipeControlListener {
 
     private void initView() {
         swipeLayoutManager = SwipeLayoutManager.getInstance();
-        swipeAdapter = new SwipeAdapter(this);
-        swipeAdapter.setList(list);
+        swipeAdapter = new SwipeAdapter(this, list);
 
         listView = (ListView) findViewById(R.id.list_view);
 
